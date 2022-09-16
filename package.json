@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Sara-Monintja/Employee-Tracker#readme",
   "dependencies": {
+    "console.table": "^0.10.0",
     "inquirer": "^8.0.2",
     "mysql2": "^2.3.3"
   },
