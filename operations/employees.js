@@ -20,10 +20,16 @@ async function getEmployee(){
 
     const [employee] = await db.query('SELECT * FROM employee');
 
-    return departments;
+    return employee;
 }
 
 // todo: add update role
+async function updateRole(){
+    
+    const db = await connect();
+
+    
+}
 
 module.exports = {
     addEmployee,

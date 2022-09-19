@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const { getDepartments, addDepartment } = require('./operations/department');
 const { getRoles, addRoles } = require('./operations/roles');
+const { getEmployee, addEmployee } = require('./operations/employee');
 
 function main(){
     return inquirer.prompt([
@@ -47,6 +48,15 @@ function main(){
                 await addRoles(ans.roles_name);
                 console.log("Role added");
                 break;
+
+        case "view all employee":
+            const employee = await getEmployee();
+            console.table(employee);
+            break;
+
+            case "add employee":
+                await addEmployee(ans.employee_first_name, ans.employee_last_name, ans.role_id, ans.manager_id)
+
 
         case "exit":
             process.exit(0);

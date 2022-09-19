@@ -1,4 +1,4 @@
-// view all departments
+// view all roles
 
 const { connect } = require("../db/connection");
 const { getDepartments } = require("./department");
